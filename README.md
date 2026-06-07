@@ -9,7 +9,7 @@ O nome da pasta e o local do diretório precisam ser fáceis de encontrar, pois,
 EX: Área de Trabalho > Instalador Office
 
 ### 2. Baixar e executar a versão atualizada do [Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)  
-O arquivo `officedepoymenttool.exe` apenas extrai o `setup.exe`. 
+O arquivo `officedeploymenttool.exe` apenas extrai o `setup.exe`. 
 Escolha a pasta criada anteriormente, por isso, precisa ter um nome e local de diretório fácil de encontrar.
 
 ### 3. Gerar o arquivo `xml` no site oficial usando a [Ferramenta de Personalização do Office](https://config.office.com/deploymentsettings)  
