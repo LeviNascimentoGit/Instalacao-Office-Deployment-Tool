@@ -47,8 +47,6 @@ Escolha a pasta criada anteriormente. Por isso, precisa ter um nome e local de d
 - Para instalar. Execute o script `Instalação - Execute como administrador.bat` como administrador  
  Esse script executa o `setup.exe` no modo de Instalação.  
  Caso o `setup.exe` não localize a pasta `Office` para realizar a instalação Offline, ele vai tentar executar a instalação online. Nesse caso será necessário uma conexão com a internet.  
- 
-> Dica: Após completar o download dos arquivos de instalação offline, renomeie a pasta `Office` para o mesmo nome do arquivo de instalação por exemplo `Excel-PowerPoint-Word-2021-LTSC_x64`. Isso vai permitir baixar várias versões diferntes do Office sem sobrescrever a anterior. Quando desejar realizar a instalação de uma dessas versões baixadas, apenas renomeie a pasta novamente para `Office`.
 
 
 ## Links úteis
