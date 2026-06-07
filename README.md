@@ -10,9 +10,9 @@ EX: Área de Trabalho > Instalador Office
 
 ### 2. Baixar e executar a versão atualizada do [Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)  
 O arquivo `officedeploymenttool.exe` apenas extrai o `setup.exe`. 
-Escolha a pasta criada anteriormente, por isso, precisa ter um nome e local de diretório fácil de encontrar.
+Escolha a pasta criada anteriormente. Por isso, precisa ter um nome e local de diretório fácil de encontrar.
 
-### 3. Gerar o arquivo `xml` no site oficial usando a [Ferramenta de Personalização do Office](https://config.office.com/deploymentsettings)  
+### 3. Gerar o arquivo `XML` no site oficial usando a [Ferramenta de Personalização do Office](https://config.office.com/deploymentsettings)  
 1. Escolha a arquitetura (32 ou 64)  
 2. Em `Office Suites`: Escolha as versões LTSC (Long-Term Servicing Channel). Isso garante que a versão é a mais estável e vai durar muito tempo com suporte  
 3. Os itens `Visio`, `Project` e `Produtos Adicionais`, são opcionais  
@@ -31,18 +31,25 @@ Escolha a pasta criada anteriormente, por isso, precisa ter um nome e local de d
 16. Clique em `Exportar`para baixar o arquivo de configuração XML. 
 17. Mova o arquivo de configuração XML para a Nova Pasta do instalador
 
-### 4. Baixar ou Instalar o Office 
-- Para baixar. Clique e arraste o arquivo de configuração XML para cima do script `Baixar - Arraste o XML aqui.bat`  
-> Será criado uma pasta com o nome `Office` e dentro dela ficam salvos todo o conteúdo do pacote de instalação Offline, isso é útil para implantar atualizações em massa, útil para suporte em grandes empresas.
-
-- Para instalar. Clique e arraste o arquivo de configuração XML para cima do script `Instalação - Execute como administrador.bat`  
- 
-> Não é necessário Baixar antes de Instalar, pois, caso a opção de instalação seja iniciada, ela executa a instalação online, por isso, é obrigatório uma conexão com a internet.  
-
-### 5. Baixar e salvar os scripts deste repositório na Nova Pasta do Instalador
+### 4. Baixar e salvar os scripts deste repositório na Nova Pasta do Instalador
 [Script de Download](https://github.com/LeviNascimentoGit/Instalacao-Office-Deployment-Tool/blob/main/Download%20-%20Arraste%20o%20XML%20aqui.bat)  
 
 [Script de Instalação](https://github.com/LeviNascimentoGit/Instalacao-Office-Deployment-Tool/blob/main/Instala%C3%A7%C3%A3o%20-%20Execute%20como%20administrador.bat)  
+
+### 5. Baixar ou Instalar o Office 
+- Para baixar. Clique e arraste o arquivo de configuração XML para cima do script `Download - Arraste o XML aqui.bat`  
+ Esse script executa o `setup.exe` no modo de Download.  
+ O `setup.exe` vai criar uma nova pasta com o nome `Office` e baixar pra dentro dela os arquivos para instalação Offline.  
+ Isso possibilita copiar a Pasta do Instalador e realizar a instalação em outro computador sem conexão à internet; ou  
+ Realizar instalações e atualizações via conexão LAN, caso a Pasta do Instalador possa ser acessada por outros computadores conectados na mesma rede, útil para prestar suporte nos escritórios de empresas.  
+> Nota: Caso seja executado um arquivo de configuração 
+
+- Para instalar. Execute o script `Instalação - Execute como administrador.bat` como administrador  
+ Esse script executa o `setup.exe` no modo de Instalação.  
+ Caso o `setup.exe` não localize a pasta `Office` para realizar a instalação Offline, ele vai tentar executar a instalação online. Nesse caso será necessário uma conexão com a internet.  
+ 
+> Dica: Após completar o download dos arquivos de instalação offline, renomeie a pasta `Office` para o mesmo nome do arquivo de instalação por exemplo `Excel-PowerPoint-Word-2021-LTSC_x64`. Isso vai permitir baixar várias versões diferntes do Office sem sobrescrever a anterior. Quando desejar realizar a instalação de uma dessas versões baixadas, apenas renomeie a pasta novamente para `Office`.
+
 
 ## Links úteis
 [Manual do Office Deployment Tool](https://learn.microsoft.com/pt-br/microsoft-365-apps/deploy/overview-office-deployment-tool)
