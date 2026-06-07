@@ -1,7 +1,7 @@
 # Pra que serve
 > Nota: Esse script não é uma ferramenta de modificação.
 
-A finalidade desse script é Baixar/Instalar a versão original do pacote MS Office via ODT ([Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)), que é uma ferramente original Microsoft. 
+A finalidade desse script é Baixar/Instalar a versão oficial do pacote MS Office via ODT ([Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)), que é uma ferramenta original Microsoft.  
 
 ## Como utilizar
 ### 1. Criar uma Nova Pasta para o instalador  
