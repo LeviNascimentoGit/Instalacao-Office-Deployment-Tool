@@ -2,7 +2,6 @@
 > Nota: Esse script não é uma ferramenta de modificação.
 
 A finalidade desse script é Baixar/Instalar a versão original do pacote MS Office via ODT ([Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)), que é uma ferramente original Microsoft. 
-Links úteis (https://learn.microsoft.com/pt-br/microsoft-365-apps/deploy/overview-office-deployment-tool)
 
 ## Como utilizar
 ### 1. Criar uma Nova Pasta para o instalador  
@@ -39,3 +38,6 @@ Escolha a pasta criada anteriormente, por isso, precisa ter um nome e local de d
 - Para instalar. Clique e arraste o arquivo de configuração XML para cima do script `Instalação - Execute como administrador.bat`  
  
 > Não é necessário Baixar antes de Instalar, pois, caso a opção de instalação seja iniciada, ela executa a instalação online, por isso, é obrigatório uma conexão com a internet.  
+
+## Links úteis
+[Manual do Office Deployment Tool](https://learn.microsoft.com/pt-br/microsoft-365-apps/deploy/overview-office-deployment-tool)
