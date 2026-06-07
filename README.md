@@ -40,7 +40,7 @@ Escolha a pasta criada anteriormente, por isso, precisa ter um nome e local de d
 > Não é necessário Baixar antes de Instalar, pois, caso a opção de instalação seja iniciada, ela executa a instalação online, por isso, é obrigatório uma conexão com a internet.  
 
 ### 5. Baixar e salvar os scripts deste repositório na Nova Pasta do Instalador
-[Script de Download](https://github.com/LeviNascimentoGit/Instalacao-Office-Deployment-Tool/blob/main/Baixar%20-%20Arraste%20o%20XML%20aqui.bat)  
+[Script de Download](https://github.com/LeviNascimentoGit/Instalacao-Office-Deployment-Tool/blob/main/Download%20-%20Arraste%20o%20XML%20aqui.bat)  
 
 [Script de Instalação](https://github.com/LeviNascimentoGit/Instalacao-Office-Deployment-Tool/blob/main/Instala%C3%A7%C3%A3o%20-%20Execute%20como%20administrador.bat)  
 
