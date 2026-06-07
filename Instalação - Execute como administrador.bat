@@ -36,6 +36,8 @@ REM 	Lista os arquivos e cria a numeração dinamicamente
 	set /a contador+=1
 	set "arquivo_!contador!=%%i"
 
+	set "nome_sem_extensao_!contador!=%%~ni"
+
 echo 	!contador!. %%i ) 
 
 	echo. 
@@ -51,8 +53,9 @@ echo 	Precisa conter um arquivo de configuração .xml nesta pasta
 
 REM 	Define a variável xml baseado na variável opção
 
-set /p opcao=^>	Escolha um número da lista e pressione [Enter]:
-set "xml=!arquivo_%opcao%!"
+	set /p opcao=^>	Escolha um número da lista e pressione [Enter]:
+	set "xml=!arquivo_%opcao%!"
+	set "pasta_alvo=!nome_sem_extensao_%opcao%!"
 
 REM 	Verifica se uma opção foi digitada
 
@@ -64,5 +67,40 @@ REM 	Verifica se uma opção foi digitada
 echo 	Selecione um número da lista
 
 timeout 2 >nul & goto inicio )	
+	ren "%pasta_alvo%" "Office"
+	start /min "Install" setup.exe /configure %xml%
 
-setup.exe /configure %xml%
+
+:checagem
+	setlocal
+	tasklist /fi "IMAGENAME eq setup.exe" 2>nul | find /i "setup.exe" >nul
+	if errorlevel 1 (ren "Office" "%pasta_alvo%" & color a & cls & echo.
+echo 	Instalação Concluída !
+	timeout 1 >nul & exit)
+
+REM 	Checa se ainda está baixando
+REM 	/fi aplica um filtro para os resultados
+REM 	IMAGENAME é uma variável do windows para se referir a arquivo executável (*.exe)
+REM 	2>nul: Esconde mensagens de erro na tela (caso o comando falhe por algum motivo)
+REM 	| find /i "setup.exe" Faz uma busca EXATA no resultado por setup.exe
+
+:animacao
+	cls & echo.
+
+echo 	%xml%
+echo.
+<nul set /p "= 	Instalando "
+timeout 1 >nul
+
+<nul set /p "=. "
+timeout /t 1 >nul
+
+:: Frame 2: Adiciona o segundo ponto
+<nul set /p "=. "
+timeout /t 1 >nul
+
+:: Frame 3: Adiciona o terceiro ponto
+<nul set /p "=. "
+timeout 1 >nul
+
+goto checagem

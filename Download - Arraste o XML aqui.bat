@@ -1,8 +1,8 @@
 	@echo off
 	chcp 65001 >nul
-start /min "Download" setup.exe /download %1
 
-	setlocal
+	set "novo_nome=%~n1"
+	start /min "Download" setup.exe /download %1
 
 REM 	Checa se ainda está baixando
 REM 	/fi aplica um filtro para os resultados
@@ -11,11 +11,12 @@ REM 	2>nul: Esconde mensagens de erro na tela (caso o comando falhe por algum mo
 REM 	| find /i "setup.exe" Faz uma busca EXATA no resultado por setup.exe
 
 :inicio
+	setlocal
 	tasklist /fi "IMAGENAME eq setup.exe" 2>nul | find /i "setup.exe" >nul
-	if errorlevel 1 (color a & cls &echo.
+	if errorlevel 1 (ren "%~dp0Office" "%novo_nome%" & color a & cls & echo.
 echo 	CONCLUÍDO!
-echo 	Salvo na pasta %1
-	timeout 1 >nul & exit )
+echo 	Salvo na pasta %novo_nome%
+	timeout 1 >nul & exit)
 
 :animacao
 	cls & echo.
