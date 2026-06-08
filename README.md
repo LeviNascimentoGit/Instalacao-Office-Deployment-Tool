@@ -1,3 +1,5 @@
+<img width="425" height="350" alt="Captura de tela 2026-06-08 174624" src="https://github.com/user-attachments/assets/6c047d8b-fb60-47ae-aee1-6ff02ea7f597" />
+
 # Pra que serve
 > Nota: Esse script não é uma ferramenta de modificação.
 
